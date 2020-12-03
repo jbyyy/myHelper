@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>image/close.gif</file>
+        <file>image/main.ico</file>
+        <file>image/max.gif</file>
+        <file>image/min.gif</file>
+        <file>image/QHlogo.png</file>
+        <file>image/table0.jpg</file>
+        <file>image/table1.jpeg</file>
+        <file>image/table2.jpg</file>
+        <file>image/table3.jpg</file>
+        <file>image/therm_bg.png</file>
+        <file>image/btn_close.png</file>
+        <file>image/btn_ok.png</file>
+        <file>image/Font Awesome Cheatsheet.png</file>
+        <file>image/fontawesome-webfont.ttf</file>
+        <file>image/msg_error.png</file>
+        <file>image/msg_info.png</file>
+        <file>image/msg_question.png</file>
+        <file>image/qt_zh_CN.qm</file>
+        <file>image/widgets.qm</file>
+    </qresource>
+</RCC>
