@@ -6,8 +6,11 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    a.setWindowIcon(QIcon(":image/image/main.ico"));
+
+
     //翻译者 在实例化 QApplication a之后 实例化MainWindow w之前
-    MyHelper::setTranslator("/home/jbyyy/QH-KJ/QTAPP/QT界面/jby总结/常规积累/myHelper/myHelper/test.qm");
+    MyHelper::setTranslator("E:/QTCode/MK_SW/Qserial/jbyhelper/myHelper/test.qm");
 
     MainWindow w;
 
@@ -17,8 +20,8 @@ int main(int argc, char *argv[])
 
     MyHelper::setCode();//文本编码格式
     MyHelper::initRand();//初始化随机数
-
-    myDialog::showTipBox("title","tip11");
+    MyHelper::setStyle(":/qss/qss/flatwhite.css");
+    /*myDialog::showTipBox("title","tip11");
     myDialog::showMessageBox("message");
     myDialog::showInputBox("input box");
     QString date1,date2;
@@ -29,12 +32,13 @@ int main(int argc, char *argv[])
 
     //QStringList str = myDialog::showQFileDialog();
     //myDialog::showQFontDialog();
-    qDebug() << myDialog::showQColorDialog();
+    qDebug() << myDialog::showQColorDialog();*/
+
     //启动托盘类
     //w.hide();
     TrayIcon::Instance()->setMainWidget(&w);
     TrayIcon::Instance()->setIcon(":/image/image/main.ico");
-    TrayIcon::Instance()->setToolTip("w.windowTitle()");
+    TrayIcon::Instance()->setToolTip(w.windowTitle());
     TrayIcon::Instance()->setVisible(true);
     QObject::connect(&w, SIGNAL(destroyed(QObject *)), TrayIcon::Instance(), SLOT(closeAll()));
 

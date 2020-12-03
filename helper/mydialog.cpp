@@ -44,7 +44,7 @@ myDialog::myDialog(QObject *parent) : QObject(parent)
   //判断图形字体是否存在,不存在则加入
   QFontDatabase fontDb;
   if (!fontDb.families().contains("FontAwesome")) {
-    int fontId = fontDb.addApplicationFont(":/image/fontawesome-webfont.ttf");
+    int fontId = fontDb.addApplicationFont(":/image/image/fontawesome-webfont.ttf");
     QStringList fontName = fontDb.applicationFontFamilies(fontId);
     if (fontName.count() == 0) {
       qDebug() << "load fontawesome-webfont.ttf error";
@@ -403,14 +403,14 @@ void QUIMessageBox::initControl()
   btnOk->setObjectName(QString::fromUtf8("btnOk"));
   btnOk->setMinimumSize(QSize(85, 0));
   btnOk->setFocusPolicy(Qt::StrongFocus);
-  btnOk->setIcon(QIcon(":/image/btn_ok.png"));
+  btnOk->setIcon(QIcon(":/image/image/btn_ok.png"));
   horizontalLayout2->addWidget(btnOk);
 
   btnCancel = new QPushButton(frame);
   btnCancel->setObjectName(QString::fromUtf8("btnCancel"));
   btnCancel->setMinimumSize(QSize(85, 0));
   btnCancel->setFocusPolicy(Qt::StrongFocus);
-  btnCancel->setIcon(QIcon(":/image/btn_close.png"));
+  btnCancel->setIcon(QIcon(":/image/image/btn_close.png"));
   horizontalLayout2->addWidget(btnCancel);
 
   verticalLayout4->addLayout(horizontalLayout2);
@@ -505,10 +505,10 @@ void QUIMessageBox::setMessage(const QString &msg, int type, int closeSec)
 
   //图片存在则取图片,不存在则取图形字体
   int size = this->labIcoMain->size().height();
-  bool exist = !QImage(":/image/msg_info.png").isNull();
+  bool exist = !QImage(":/image/image/msg_info.png").isNull();
   if (type == 0) {//信息
     if (exist) {
-      this->labIcoMain->setStyleSheet("border-image: url(:/image/msg_info.png);");
+      this->labIcoMain->setStyleSheet("border-image: url(:/image/image/msg_info.png);");
     } else {
       myDialog::Instance()->setIcon(this->labIcoMain, 0xf05a, size);
     }
@@ -517,7 +517,7 @@ void QUIMessageBox::setMessage(const QString &msg, int type, int closeSec)
     this->labTitle->setText("提示");
   } else if (type == 1) {
     if (exist) {
-      this->labIcoMain->setStyleSheet("border-image: url(:/image/msg_question.png);");
+      this->labIcoMain->setStyleSheet("border-image: url(:/image/image/msg_question.png);");
     } else {
       myDialog::Instance()->setIcon(this->labIcoMain, 0xf059, size);
     }
@@ -525,7 +525,7 @@ void QUIMessageBox::setMessage(const QString &msg, int type, int closeSec)
     this->labTitle->setText("询问");
   } else if (type == 2) {
     if (exist) {
-      this->labIcoMain->setStyleSheet("border-image: url(:/image/msg_error.png);");
+      this->labIcoMain->setStyleSheet("border-image: url(:/image/image/msg_error.png);");
     } else {
       myDialog::Instance()->setIcon(this->labIcoMain, 0xf057, size);
     }
@@ -922,13 +922,13 @@ void QUIInputBox::initControl()
   btnOk = new QPushButton(frame);
   btnOk->setObjectName(QString::fromUtf8("btnOk"));
   btnOk->setMinimumSize(QSize(85, 0));
-  btnOk->setIcon(QIcon(":/image/btn_ok.png"));
+  btnOk->setIcon(QIcon(":/image/image/btn_ok.png"));
   lay->addWidget(btnOk);
 
   btnCancel = new QPushButton(frame);
   btnCancel->setObjectName(QString::fromUtf8("btnCancel"));
   btnCancel->setMinimumSize(QSize(85, 0));
-  btnCancel->setIcon(QIcon(":/image/btn_close.png"));
+  btnCancel->setIcon(QIcon(":/image/image/btn_close.png"));
   lay->addWidget(btnCancel);
 
   verticalLayout3->addLayout(lay);
@@ -1216,7 +1216,7 @@ void QUIDateSelect::initControl()
   btnOk->setMinimumSize(QSize(85, 0));
   btnOk->setCursor(QCursor(Qt::PointingHandCursor));
   btnOk->setFocusPolicy(Qt::StrongFocus);
-  btnOk->setIcon(QIcon(":/image/btn_ok.png"));
+  btnOk->setIcon(QIcon(":/image/image/btn_ok.png"));
   gridLayout->addWidget(btnOk, 0, 2, 1, 1);
 
   labEnd = new QLabel(frame);
@@ -1229,7 +1229,7 @@ void QUIDateSelect::initControl()
   btnClose->setMinimumSize(QSize(85, 0));
   btnClose->setCursor(QCursor(Qt::PointingHandCursor));
   btnClose->setFocusPolicy(Qt::StrongFocus);
-  btnClose->setIcon(QIcon(":/image/btn_close.png"));
+  btnClose->setIcon(QIcon(":/image/image/btn_close.png"));
   gridLayout->addWidget(btnClose, 1, 2, 1, 1);
 
   dateStart = new QDateTimeEdit(frame);
