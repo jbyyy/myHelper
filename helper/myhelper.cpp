@@ -847,7 +847,7 @@ QByteArray MyHelper::hexStrToByteArray(const QString &str)
 
     for (int i = 0; i < len;) {
         hstr = str.at(i).toLatin1();
-        if (hstr == ' ') {
+        if (hstr == ' ') {//过滤空格
             i++;
             continue;
         }

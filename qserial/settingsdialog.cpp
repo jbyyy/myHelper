@@ -55,6 +55,7 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QIntValidator>
 #include <QLineEdit>
+#include <QDebug>
 
 QT_USE_NAMESPACE
 
@@ -81,7 +82,6 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
 
     fillPortsParameters();
     fillPortsInfo();
-
     updateSettings();
 }
 
@@ -119,6 +119,8 @@ void SettingsDialog::checkCustomBaudRatePolicy(int idx)
 {
     bool isCustomBaudRate = !ui->baudRateBox->itemData(idx).isValid();
     ui->baudRateBox->setEditable(isCustomBaudRate);
+    qDebug() << "checkCustomBaudRatePolicy" << isCustomBaudRate;
+
     if (isCustomBaudRate) {
         ui->baudRateBox->clearEditText();
         QLineEdit *edit = ui->baudRateBox->lineEdit();
@@ -129,6 +131,7 @@ void SettingsDialog::checkCustomBaudRatePolicy(int idx)
 void SettingsDialog::checkCustomDevicePathPolicy(int idx)
 {
     bool isCustomPath = !ui->serialPortInfoListBox->itemData(idx).isValid();
+    qDebug() << "checkCustomDevicePathPolicy" << isCustomPath;
     ui->serialPortInfoListBox->setEditable(isCustomPath);
     if (isCustomPath)
         ui->serialPortInfoListBox->clearEditText();

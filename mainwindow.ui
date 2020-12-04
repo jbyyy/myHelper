@@ -68,13 +68,6 @@
            <string>串口配置</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_6">
-           <item row="0" column="0">
-            <widget class="QCheckBox" name="ckHexSend">
-             <property name="text">
-              <string>Hex发送</string>
-             </property>
-            </widget>
-           </item>
            <item row="0" column="1">
             <widget class="QCheckBox" name="ckHexReceive">
              <property name="text">
@@ -89,6 +82,13 @@
              </property>
             </widget>
            </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="ckHexSend">
+             <property name="text">
+              <string>Hex发送</string>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="1">
             <widget class="QCheckBox" name="ckAutoClear">
              <property name="text">
@@ -97,86 +97,27 @@
             </widget>
            </item>
            <item row="2" column="0" colspan="2">
-            <layout class="QGridLayout" name="gridLayout_4">
-             <item row="0" column="0">
-              <widget class="QCheckBox" name="ckAutoSend">
-               <property name="text">
-                <string>自动发送</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QComboBox" name="cboxSendInterval">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QCheckBox" name="ckAutoSave">
-               <property name="text">
-                <string>自动保存</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QComboBox" name="cboxSaveInterval">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item row="3" column="0" colspan="2">
             <widget class="QPushButton" name="btnSendCount">
              <property name="text">
               <string>发送 : 0 字节</string>
              </property>
             </widget>
            </item>
-           <item row="4" column="0" colspan="2">
+           <item row="3" column="0" colspan="2">
             <widget class="QPushButton" name="btnReceiveCount">
              <property name="text">
               <string>接收 : 0 字节</string>
              </property>
             </widget>
            </item>
-           <item row="5" column="0" colspan="2">
-            <widget class="QPushButton" name="btnStopShow">
-             <property name="text">
-              <string>停止显示</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="0" colspan="2">
+           <item row="4" column="0" colspan="2">
             <widget class="QPushButton" name="btnSave">
              <property name="text">
               <string>保存数据</string>
              </property>
             </widget>
            </item>
-           <item row="7" column="0" colspan="2">
-            <widget class="QPushButton" name="btnData">
-             <property name="text">
-              <string>管理数据</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="0" colspan="2">
-            <widget class="QPushButton" name="btnClear">
-             <property name="text">
-              <string>清空数据</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="0" colspan="2">
+           <item row="5" column="0" colspan="2">
             <spacer name="verticalSpacer">
              <property name="orientation">
               <enum>Qt::Vertical</enum>

@@ -4,7 +4,7 @@
 #include <QLabel>
 #include <QMainWindow>
 #include <QPushButton>
-#include <QSerialPort>
+#include "seriallogic.h"
 
 class SettingsDialog;
 
@@ -33,16 +33,13 @@ private slots:
     void readData();            //读取串口数据
     void sendData();            //发送串口数据
     void sendData(const QString& data);//发送串口数据带参数
-    void saveData();            //保存串口数据
-    void append(int type, const QString &data, bool clear = false);
+    void append(SerialPort::AppendType type, const QString &data);
 
 private:
-
     Ui::MainWindow *ui;
     QPushButton *button;
-    SettingsDialog *m_settingsDialog;
-    QSerialPort *serial;
     QLabel *serialStatus;
+    SerialLogic *m_serialPort;
 
 };
 
